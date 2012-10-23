@@ -1,0 +1,4 @@
+<?php
+	// Put constants here
+?>
+
