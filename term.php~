@@ -84,26 +84,7 @@
 									</tr>
 									<tr>
 										<td><b>Position:</b></td>
-										<td>
-											<?php
-												if ($positionTermId != "")
-												{
-											?>
-													<a href="term.php?termId=<?= $positionTermId ?>&gameId=<?= $gameId ?>&week=<?= $week ?>">
-											<?php
-												}
-											?>
-												<?= $player["position"] ?>
-											<?php
-												if ($positionTermId != "")
-												{
-											?>
-													</a>
-											<?php
-												}
-											?>
-											</a>
-										</td>
+										<td><a href="term.php?termId=<?= $positionTermId ?>&gameId=<?= $gameId ?>&week=<?= $week ?>"><?= $player["position"] ?></a></td>
 									</tr>
 									<tr>
 										<td><b>Weight:</b></td>
