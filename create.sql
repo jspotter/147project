@@ -13,6 +13,8 @@ create table Play
 	gameId integer,
 	quarter integer,
 	clock varchar(100),
+	awayScore integer,
+	homeScore integer,
 	description text
 );
 

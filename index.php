@@ -28,6 +28,8 @@
 			{
 				$previousWeek = max(1, $week - 1);
 				$nextWeek = min($week + 1, $numWeeks);
+				$weekStart = $WEEK_STARTS[$week - 1];
+				$weekEnd = $WEEK_ENDS[$week - 1];
 		?>
 				<div data-role="page" id="week<?= $week ?>">
 
@@ -57,33 +59,62 @@
 					<div data-role="content">
 						<ul data-role="listview" data-inset="true" data-filter="true">
 						<?php
-							$numGames = 10;
-							for ($i = 1; $i <= $numGames; $i++)
+							$games = executeQuery($db, 
+								"select * from Game where startTime >= '" . $weekStart
+								."' and startTime <= '" . $weekEnd . "';");
+							for ($i = 0; $i < count($games); $i++)
 							{
+								$awayTeam = executeQuery($db,
+									"select * from Team where id = " . $games[$i]["awayTeamId"]);
+								$homeTeam = executeQuery($db,
+									"select * from Team where id = " . $games[$i]["homeTeamId"]);
+								$final = $games[$i]["endTime"] != "";
+								$quarterResult = executeQuery($db,
+									"select max(quarter) as mq from Play where gameId = " . $games[$i]["id"]);
+								$quarter = "Quarter " . $quarterResult[0]["mq"];
+								$playResult = executeQuery($db,
+									"select * from Play where gameId = " . $games[$i]["id"]
+									. " order by quarter desc, clock;");
+								$clock = $playResult[0]["clock"];
 						?>
 								<li>
-									<a href="#game">
+									<a href="game.php?id=<?= $games[$i]['id'] ?>&week=<?= $week ?>">
 										<table>
 											<tr>
 												<td>
-													Team<?= $i ?> (ranking)
+													<?= $awayTeam[0]["name"]; ?>
 												</td>
 												<td>
-													10
+													<?= $playResult[0]["awayScore"] ?>
 												</td>
 												<td>
-													3rd
+													
+													<?php
+														if ($final)
+														{
+															echo "F";
+														}
+														else
+														{
+															echo $quarter;
+														}
+													?>
 												</td>
 											</tr>
 											<tr>
 												<td>
-													Opponent<?= $i ?> (ranking)
+													<?= $homeTeam[0]["name"]; ?>
 												</td>
 												<td>
-													3
+													<?= $playResult[0]["homeScore"] ?>
 												</td>
 												<td>
-													5:03
+													<?php
+														if (!$final)
+														{
+															echo $clock;
+														}
+													?>
 												</td>
 											</tr>
 										</table>
@@ -99,17 +130,6 @@
 		<?php
 			}
 		?>
-		<div data-role="page" id="game" data-add-back-btn="true">
-			<div data-role="header">
-				<h1>Football 4 Noobz</h1>
-			</div><!-- /header -->
-			
-			<div data-role="content">
-				terms terms terms <a href="#term" data-rel="dialog">TERM</a> terms terms
-				<hr>
-				more terms more terms
-			</div>
-		</div>
 		
 		<div data-role="page" id="term">
 			<div data-role="header" data-theme="e">
