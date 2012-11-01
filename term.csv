@@ -1,0 +1,285 @@
+1<>down<>general<>"A play, starting when the ball is put into play and ending when the ball is ruled dead"
+2<>drive<>general<>"The series of plays when the offense has the football, until it punts or scores and the other team gets possession of the ball."
+3<>field goal<>event<>"A kick, worth three points"
+4<>fumble<>event<>The act of losing possession of the ball while running with it or being tackled.
+5<>turnover<>event<>A loss of possession of the ball via a fumble or interception.
+6<>incomplete pass<>general<>A pass that touches the ground before being caught or that is caught while the player is out of bounds
+7<>interception<>event<>"A pass that's caught by a defensive player, ending the offense's possession of the ball."
+8<>kickoff<>event<>A free kick that puts the ball into play.
+9<>punt<>general<>A kick made when a punter drops the ball and kicks it while it falls toward his foot.
+10<>return<>general<>The act of bringing the ball back in the opposite direction after a change of possession.
+11<>rush<>event<>"To advance the ball by running, not passing"
+12<>sack<>event<>Any tackle of the quarterback behind the line of scrimmage.
+13<>touchdown<>event<>"A scoring play, worth 6 points"
+14<>extra point<>event<>"A kick, worth one point, that's typically attempted after every touchdown"
+15<>false start<>event<>An infraction in which an offensive player moves before the ball is snapped.
+16<>timeout<>general<>A break in action requested by either team or one of the officials.
+17<>Usua Amanam<>player<>
+18<>Henry Anderson<>player<>
+19<>Kevin Anderson<>player<>
+20<>Brendon Austin<>player<>
+21<>Harold Bernard<>player<>
+22<>Dillon Bonnell<>player<>
+23<>Terrence Brown<>player<>
+24<>Barry Browning<>player<>
+25<>Devon Cajuste<>player<>
+26<>Lance Callihan<>player<>
+27<>Devon Carrington<>player<>
+28<>Alex Carter<>player<>
+29<>Johnny Caspers<>player<>
+30<>Conner Crane<>player<>
+31<>Evan Crower<>player<>
+32<>Jackson Cummings<>player<>
+33<>Kevin Danser<>player<>
+34<>Nick Davidson<>player<>
+35<>Noor Davis<>player<>
+36<>Alex Debniak<>player<>
+37<>Davis Dudchock<>player<>
+38<>Zach Ertz<>player<>
+39<>Brent Etiz<>player<>
+40<>John Flacco<>player<>
+41<>Cameron Fleming<>player<>
+42<>Alex Frkovic<>player<>
+43<>George Fullerton<>player<>
+44<>Chris Gaertner<>player<>
+45<>Ben Gardner<>player<>
+46<>Joshua Garnett<>player<>
+47<>Brandon Gottfried<>player<>
+48<>Jacob Gowan<>player<>
+49<>Chris Harrell<>player<>
+50<>Ronnie Harris<>player<>
+51<>Anthony Hayes<>player<>
+52<>Joe Hemschoot<>player<>
+53<>Ryan Hewitt<>player<>
+54<>Zach Hoffpauir<>player<>
+55<>Kevin Hogan<>player<>
+56<>Charlie Hopkins<>player<>
+57<>Craig Jones<>player<>
+58<>Dontonio Jordan<>player<>
+59<>Matt Kasner<>player<>
+60<>Luke Kaumatule<>player<>
+61<>Sam Knapp<>player<>
+62<>Gautam Krishnamurthi<>player<>
+63<>Cason Kynes<>player<>
+64<>Jarek Lancaster<>player<>
+65<>Dallas Lloyd<>player<>
+66<>Nate Lohn<>player<>
+67<>Blake Lueders<>player<>
+68<>Wayne Lyons<>player<>
+69<>Drew Madhu<>player<>
+70<>Blake Martinez<>player<>
+71<>Josh Mauro<>player<>
+72<>Conor McFadden<>player<>
+73<>Geoff Meinken<>player<>
+74<>Sam Mercer<>player<>
+75<>Reed Miller<>player<>
+76<>Ty Montgomery<>player<>
+77<>Brian Moran<>player<>
+78<>Myles Muagututia<>player<>
+79<>Kyle Murphy<>player<>
+80<>Trent Murphy<>player<>
+81<>Keanu Nelson<>player<>
+82<>Brett Nottingham<>player<>
+83<>Josh Nunes<>player<>
+84<>Ikenna Nwafor<>player<>
+85<>David Olson<>player<>
+86<>Kyle Olugbode<>player<>
+87<>David Parry<>player<>
+88<>Jamal-Rashad Patterson<>player<>
+89<>Josiah Paye<>player<>
+90<>Andrus Peat<>player<>
+91<>Robbie Picazo<>player<>
+92<>Ra'Chard Pippens<>player<>
+93<>Eddie Plantaric<>player<>
+94<>Jordan Pratt<>player<>
+95<>Michael Rector<>player<>
+96<>Kevin Reihner<>player<>
+97<>Ed Reynolds<>player<>
+98<>Ben Rhyne<>player<>
+99<>Jordan Richards<>player<>
+100<>Jemari Roberts<>player<>
+101<>Torsten Rotto<>player<>
+102<>J.B. Salem<>player<>
+103<>Barry Sanders<>player<>
+104<>Sam Schwartzstein<>player<>
+105<>Ricky Seale<>player<>
+106<>Brent Seals<>player<>
+107<>Aziz Shittu<>player<>
+108<>Sam Shober<>player<>
+109<>Graham Shuler<>player<>
+110<>Patrick Skov<>player<>
+111<>Shayne Skov<>player<>
+112<>Rollins Stallworth<>player<>
+113<>Terrence Stephens<>player<>
+114<>Andrew Stutz<>player<>
+115<>Spencer Summers<>player<>
+116<>A.J. Tarpley<>player<>
+117<>Stepfan Taylor<>player<>
+118<>Drew Terrell<>player<>
+119<>Chase Thomas<>player<>
+120<>Levine Toilolo<>player<>
+121<>Jeff Trojan<>player<>
+122<>Austin Tubbs<>player<>
+123<>Conrad Ukropina<>player<>
+124<>Cole Underwood<>player<>
+125<>James Vaughters<>player<>
+126<>Lee Ward<>player<>
+127<>Jordan Watkins<>player<>
+128<>Kodi Whitfield<>player<>
+129<>Anthony Wilkerson<>player<>
+130<>Khalil Wilkes<>player<>
+131<>Jordan Williamson<>player<>
+132<>Remound Wright<>player<>
+133<>David Yankey<>player<>
+134<>Alex Yazdi<>player<>
+135<>Kelsey Young<>player<>
+136<>Sam Yules<>player<>
+137<>Daniel Zychlinski<>player<>
+138<>Chris Adcock<>player<>
+139<>Ted Agu<>player<>
+140<>Keenan Allen<>player<>
+141<>C.J. Anderson<>player<>
+142<>Ross Anderson<>player<>
+143<>Stephen Anderson<>player<>
+144<>Marc Anthony<>player<>
+145<>Todd Barr<>player<>
+146<>Mitchel Bartolo<>player<>
+147<>Michael Barton<>player<>
+148<>Noah Beito<>player<>
+149<>Brendan Bigelow<>player<>
+150<>Kyle Boehm<>player<>
+151<>Ross Bostock<>player<>
+152<>Jackson Bouza<>player<>
+153<>Mark Brazinski<>player<>
+154<>Spencer Briare<>player<>
+155<>Allan Bridgford<>player<>
+156<>Nathan Broussard<>player<>
+157<>Brett Buchanan<>player<>
+158<>Benjamin Calder<>player<>
+159<>Dan Camporeale<>player<>
+160<>Austin Clark<>player<>
+161<>Matt Cochran<>player<>
+162<>Deandre Coleman<>player<>
+163<>Idarre Coles<>player<>
+164<>Jeffrey Coprich<>player<>
+165<>Alejandro Crosthwaite<>player<>
+166<>Vincenzo D'Amato<>player<>
+167<>Antione Davis<>player<>
+168<>Jake Davis<>player<>
+169<>Cedric Dozier<>player<>
+170<>Damariay Drew<>player<>
+171<>Tyré Ellison<>player<>
+172<>Darren Ervin<>player<>
+173<>Maximo Espitia<>player<>
+174<>Dan Fadelli<>player<>
+175<>Brian Farley<>player<>
+176<>Nick Forbes<>player<>
+177<>Khairi Fortt<>player<>
+178<>Donovan Frazer<>player<>
+179<>Dominic Galas<>player<>
+180<>Geoffrey Gibson<>player<>
+181<>Jason Gibson<>player<>
+182<>Lucus Gingold<>player<>
+183<>James Grisom<>player<>
+184<>Spencer Hagan<>player<>
+185<>Chris Harper<>player<>
+186<>Maurice Harris<>player<>
+187<>Josh Hill<>player<>
+188<>Austin Hinder<>player<>
+189<>Jonah Hodges<>player<>
+190<>J.P. Hurrell<>player<>
+191<>Kameron Jackson<>player<>
+192<>Mustafa Jalil<>player<>
+193<>Jalen Jefferson<>player<>
+194<>Keni Kaufusi<>player<>
+195<>Brendan Keeney<>player<>
+196<>Gabe King<>player<>
+197<>Lucas King<>player<>
+198<>Zach Kline<>player<>
+199<>Kameron Krebs<>player<>
+200<>Kaulin Krebs<>player<>
+201<>Cary Kriegsman<>player<>
+202<>James Langford<>player<>
+203<>Isaac Lapite<>player<>
+204<>Daniel Lasco<>player<>
+205<>Kenny Lawler<>player<>
+206<>Adrian Lee<>player<>
+207<>Cole Leininger<>player<>
+208<>Alex Logan<>player<>
+209<>Puka Lopa<>player<>
+210<>Michael Lowe<>player<>
+211<>Brandon Madueño<>player<>
+212<>Joey Mahalic<>player<>
+213<>Mike Manuel<>player<>
+214<>Matt Mayes<>player<>
+215<>Zach Maynard<>player<>
+216<>Chris McCain<>player<>
+217<>Stefan McClure<>player<>
+218<>Bryce McGovern<>player<>
+219<>Viliami Moala<>player<>
+220<>Tanner Mohr<>player<>
+221<>Steven Moore<>player<>
+222<>Duke Moran<>player<>
+223<>Jordan Morgan<>player<>
+224<>Steffan Mos<>player<>
+225<>Robert Mullins<>player<>
+226<>Hardy Nickerson<>player<>
+337<>Bradley Northnagel<>player<>
+228<>Christian Okafor<>player<>
+229<>Ikem Okwudiafor<>player<>
+230<>Kendrick Payne<>player<>
+231<>Nathan Phillip<>player<>
+232<>Griffin Piatt<>player<>
+233<>Darius Powe<>player<>
+234<>Jordan Rigsbee<>player<>
+235<>Tyler Rigsbee<>player<>
+236<>Richard Rodgers<>player<>
+237<>Vachel Samuels<>player<>
+238<>Brennan Scarlett<>player<>
+239<>Brian Schwenke<>player<>
+240<>Avery Sebastian<>player<>
+241<>John Sheperdson<>player<>
+242<>Chad Smith<>player<>
+243<>Isi Sofele<>player<>
+244<>Eric Stevens<>player<>
+245<>Matt Summers-Gavin<>player<>
+246<>Freddie Tagaloa<>player<>
+247<>Aaron Tipoti<>player<>
+248<>Bryce Treggs<>player<>
+249<>Bill Tyndall<>player<>
+250<>Jacob Wark<>player<>
+251<>Cecil Whiteside<>player<>
+252<>Harrison Wilfley<>player<>
+253<>David Wilkerson<>player<>
+254<>Matt Williams<>player<>
+255<>Steve Williams<>player<>
+256<>Joel Willis<>player<>
+257<>Patrick Worstell<>player<>
+258<>Dasarte Yarnway<>player<>
+259<>C<>position<>
+260<>CB<>position<>
+261<>DB<>position<>
+262<>DE<>position<>
+263<>DT<>position<>
+264<>FS<>position<>
+265<>FB<>position<>
+266<>G<>position<>
+267<>K<>position<>
+268<>KR<>position<>
+269<>ILB<>position<>
+270<>LB<>position<>
+271<>MLB<>position<>
+272<>NT<>position<>
+273<>P<>position<>
+274<>PR<>position<>
+275<>QB<>position<>
+276<>RB<>position<>
+277<>S<>position<>
+278<>SS<>position<>
+279<>T<>position<>
+280<>TE<>position<>
+281<>WR<>position<>
+282<>OL<>position<>
+283<>DL<>position<>
+284<>faircatch<>event<>"When the player returning a punt signals by waving his extended arm from side to side over his head, making it illegal for the opposition to tackle him."
+285<>penalty<>event<>Punishment for an infraction of the rules.

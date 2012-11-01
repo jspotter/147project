@@ -1,3 +1,8 @@
 .separator <>
-.import data.dat SampleTable
+.import game.csv Game
+.import play.csv Play
+.import player.csv Player
+.import position.csv Position
+.import team.csv Team
+.import term.csv Term
 
