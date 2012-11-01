@@ -5,4 +5,5 @@
 .import position.csv Position
 .import team.csv Team
 .import term.csv Term
+.import alias.csv Alias
 

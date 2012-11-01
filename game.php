@@ -43,26 +43,46 @@
 				<h1>Football 4 Noobz</h1>
 			</div><!-- /header -->
 			<div data-role="header">
-				<h1>
+				<center>
 					<?= $awayTeam[0]["name"] ?> @ <?= $homeTeam[0]["name"] ?>
-				</h1>
+				</center>
 			</div>
 		
 			<div data-role="content">
-				<table>
-					<tr>
+				<table class="playtable">
+					<!--tr>
 						<th>Quarter</th>
 						<th>Clock</th>
 						<th>Description</th>
 						<th><?= $awayTeam[0]["name"] ?></th>
 						<th><?= $homeTeam[0]["name"] ?></th>
-					</tr>
+					</tr-->
 					<?php
+						$curquarter = $playResult[0]["quarter"];
+					?>
+						<tr>
+							<td></td>
+							<td><center><h3>Quarter <?= $curquarter ?></h3></center>
+							<td></td>
+							<td></td>
+					<?
 						foreach ($playResult as $play)
 						{
+							$quarter = $play["quarter"];
+							if ($quarter != $curquarter)
+							{
+								$curquarter = $quarter;
+					?>
+								<tr>
+									<td></td>
+									<td><br><center><h3>Quarter <?= $curquarter ?></h3></center>
+									<td></td>
+									<td></td>
+								</tr>
+					<?php
+							}
 					?>
 							<tr>
-								<td><?= $play["quarter"] ?></td>
 								<td><?= $play["clock"] ?></td>
 								<td><?= processDescription($db, $play["description"], $gameId, $week) ?></td>
 								<td><?= $play["awayScore"] ?></td>

@@ -50,3 +50,9 @@ create table Term
 	description text
 );
 
+create table Alias
+(
+	alias varchar(100) PRIMARY KEY,
+	termId integer
+);
+

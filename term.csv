@@ -99,7 +99,7 @@
 99<>Jordan Richards<>player<>
 100<>Jemari Roberts<>player<>
 101<>Torsten Rotto<>player<>
-102<>J.B. Salem<>player<>
+102<>JB Salem<>player<>
 103<>Barry Sanders<>player<>
 104<>Sam Schwartzstein<>player<>
 105<>Ricky Seale<>player<>
@@ -113,7 +113,7 @@
 113<>Terrence Stephens<>player<>
 114<>Andrew Stutz<>player<>
 115<>Spencer Summers<>player<>
-116<>A.J. Tarpley<>player<>
+116<>AJ Tarpley<>player<>
 117<>Stepfan Taylor<>player<>
 118<>Drew Terrell<>player<>
 119<>Chase Thomas<>player<>
@@ -138,7 +138,7 @@
 138<>Chris Adcock<>player<>
 139<>Ted Agu<>player<>
 140<>Keenan Allen<>player<>
-141<>C.J. Anderson<>player<>
+141<>CJ Anderson<>player<>
 142<>Ross Anderson<>player<>
 143<>Stephen Anderson<>player<>
 144<>Marc Anthony<>player<>
@@ -187,7 +187,7 @@
 187<>Josh Hill<>player<>
 188<>Austin Hinder<>player<>
 189<>Jonah Hodges<>player<>
-190<>J.P. Hurrell<>player<>
+190<>JP Hurrell<>player<>
 191<>Kameron Jackson<>player<>
 192<>Mustafa Jalil<>player<>
 193<>Jalen Jefferson<>player<>
@@ -281,5 +281,6 @@
 281<>WR<>position<>
 282<>OL<>position<>
 283<>DL<>position<>
-284<>faircatch<>event<>When the player returning a punt signals by waving his extended arm from side to side over his head, making it illegal for the opposition to tackle him.
+284<>fair catch<>event<>When the player returning a punt signals by waving his extended arm from side to side over his head, making it illegal for the opposition to tackle him.
 285<>penalty<>event<>Punishment for an infraction of the rules.
+286<>pass<>event<>When a player (usually the QB) throws the ball to another player in an effort to advance the ball on the field.

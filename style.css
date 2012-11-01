@@ -3,3 +3,19 @@ table
 	width: 100%;
 }
 
+td
+{
+	margin: 0px;
+	padding: 2px;
+}
+
+table.playtable, table.playtable tr, table.playtable td
+{
+	border-bottom: 1px solid gray;
+}
+
+a.player
+{
+	color: red;
+}
+

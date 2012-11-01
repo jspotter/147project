@@ -21,7 +21,7 @@
 		<script src="jquery-1.8.2.min.js"></script>
 		<script src="jquery.mobile-1.2.0.js"></script>
 	</head>
-	<body>
+	<body onload="window.location='#week9';">
 		<?php
 			$numWeeks = 15;
 			for ($week = 1; $week <= $numWeeks; $week++)
