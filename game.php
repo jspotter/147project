@@ -2,6 +2,7 @@
 	include ("./constants.php");
 	include ("./dbconnect.php");
 	include ("./dbfuncs.php");
+	include ("./funcs.php");
 	
 	$gameId = $_GET["id"];
 	$week = $_GET["week"];
@@ -36,7 +37,7 @@
 	<body>
 		<div data-role="page">
 			<div data-role="header">
-				<a href="../#week<?= $week ?>">
+				<a href="../147project/#week<?= $week ?>">
 					Back
 				</a>
 				<h1>Football 4 Noobz</h1>
@@ -63,7 +64,7 @@
 							<tr>
 								<td><?= $play["quarter"] ?></td>
 								<td><?= $play["clock"] ?></td>
-								<td><?= $play["description"] ?></td>
+								<td><?= processDescription($db, $play["description"], $gameId, $week) ?></td>
 								<td><?= $play["awayScore"] ?></td>
 								<td><?= $play["homeScore"] ?></td>
 							</tr>

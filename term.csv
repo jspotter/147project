@@ -1,17 +1,17 @@
-1<>down<>general<>"A play, starting when the ball is put into play and ending when the ball is ruled dead"
-2<>drive<>general<>"The series of plays when the offense has the football, until it punts or scores and the other team gets possession of the ball."
-3<>field goal<>event<>"A kick, worth three points"
+1<>down<>general<>A play, starting when the ball is put into play and ending when the ball is ruled dead
+2<>drive<>general<>The series of plays when the offense has the football, until it punts or scores and the other team gets possession of the ball.
+3<>field goal<>event<>A kick, worth three points
 4<>fumble<>event<>The act of losing possession of the ball while running with it or being tackled.
 5<>turnover<>event<>A loss of possession of the ball via a fumble or interception.
 6<>incomplete pass<>general<>A pass that touches the ground before being caught or that is caught while the player is out of bounds
-7<>interception<>event<>"A pass that's caught by a defensive player, ending the offense's possession of the ball."
+7<>interception<>event<>A pass that's caught by a defensive player, ending the offense's possession of the ball.
 8<>kickoff<>event<>A free kick that puts the ball into play.
 9<>punt<>general<>A kick made when a punter drops the ball and kicks it while it falls toward his foot.
 10<>return<>general<>The act of bringing the ball back in the opposite direction after a change of possession.
-11<>rush<>event<>"To advance the ball by running, not passing"
+11<>rush<>event<>To advance the ball by running, not passing
 12<>sack<>event<>Any tackle of the quarterback behind the line of scrimmage.
-13<>touchdown<>event<>"A scoring play, worth 6 points"
-14<>extra point<>event<>"A kick, worth one point, that's typically attempted after every touchdown"
+13<>touchdown<>event<>A scoring play, worth 6 points
+14<>extra point<>event<>A kick, worth one point, that's typically attempted after every touchdown
 15<>false start<>event<>An infraction in which an offensive player moves before the ball is snapped.
 16<>timeout<>general<>A break in action requested by either team or one of the officials.
 17<>Usua Amanam<>player<>
@@ -208,7 +208,7 @@
 208<>Alex Logan<>player<>
 209<>Puka Lopa<>player<>
 210<>Michael Lowe<>player<>
-211<>Brandon Madueño<>player<>
+211<>Brandon Madueno<>player<>
 212<>Joey Mahalic<>player<>
 213<>Mike Manuel<>player<>
 214<>Matt Mayes<>player<>
@@ -281,5 +281,5 @@
 281<>WR<>position<>
 282<>OL<>position<>
 283<>DL<>position<>
-284<>faircatch<>event<>"When the player returning a punt signals by waving his extended arm from side to side over his head, making it illegal for the opposition to tackle him."
+284<>faircatch<>event<>When the player returning a punt signals by waving his extended arm from side to side over his head, making it illegal for the opposition to tackle him.
 285<>penalty<>event<>Punishment for an infraction of the rules.
