@@ -2,14 +2,29 @@
 	include ("./constants.php");
 	include ("./dbconnect.php");
 	include ("./dbfuncs.php");
+	include ("./funcs.php");
 	
-	$termId = $_GET["termId"];
+	$termIdsString = $_GET["termIds"];
 	$gameId = $_GET["gameId"];
 	$week = $_GET["week"];
 	
 	//TODO handle invalid input
 	//TODO put week in the database?
-	//TODO support lookup chaining
+	
+	$termIds = explode(",", $termIdsString);
+	$backTermIds = array_slice($termIds, 0, count($termIds) - 1);
+	if (count($backTermIds) == 0)
+	{
+		$backLink = "../147project/game.php?id=" . $gameId . "&week="
+			. $week;
+	}
+	else
+	{
+		$backLink = "../147project/term.php?termIds=" . implode(",", $backTermIds)
+			. "&gameId=" . $gameId . "&week=" . $week;
+	}
+	$termId = $termIds[count($termIds) - 1];
+	
 ?>
 
 <html>
@@ -32,7 +47,7 @@
 	<body>
 		<div data-role="page">
 			<div data-role="header">
-				<a href="../147project/game.php?id=<?= $gameId ?>&week=<?= $week ?>">
+				<a href="<?= $backLink ?>">
 					Back
 				</a>
 				<h1>Football 4 Noobz</h1>
@@ -68,10 +83,6 @@
 								$teamResult = executeQuery($db,
 									"select * from Team where id = " . $player["teamId"] . ";");
 								$team = $teamResult[0];
-								$positionTermResult = executeQuery($db,
-									"select id from Term where name='"
-									. $player["position"] . "';");
-								$positionTermId = $positionTermResult[0]["id"];
 					?>
 								<table>
 									<tr>
@@ -85,24 +96,7 @@
 									<tr>
 										<td><b>Position:</b></td>
 										<td>
-											<?php
-												if ($positionTermId != "")
-												{
-											?>
-													<a href="term.php?termId=<?= $positionTermId ?>&gameId=<?= $gameId ?>&week=<?= $week ?>">
-											<?php
-												}
-											?>
-												<?= $player["position"] ?>
-											<?php
-												if ($positionTermId != "")
-												{
-											?>
-													</a>
-											<?php
-												}
-											?>
-											</a>
+											<?= processDescription($db, $player["position"], $termIds, $gameId, $week) ?>
 										</td>
 									</tr>
 									<tr>
@@ -127,14 +121,14 @@
 								$position = $positionResult[0];
 					?>
 								<b><?= $position["name"] ?> (<?= $position["abbreviation"] ?>): </b>
-								<?= $position["description"] ?>
+								<?= processDescription($db, $position["description"], $termIds, $gameId, $week) ?>
 					<?php
 							}
 							else
 							{
 					?>
 								<b><?= $term["name"] ?>: </b>
-								<?= $term["description"] ?>
+								<?= processDescription($db, $term["description"], $termIds, $gameId, $week) ?>
 					<?php
 							}
 						}

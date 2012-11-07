@@ -1,7 +1,9 @@
 <?php
-	function processDescription($db, $description, $gameId, $week)
+	function processDescription($db, $description, $termIds, $gameId, $week)
 	{
 		$descArray = explode(" ", $description);
+		$newDesc = implode("/", $descArray);
+		$descArray = explode("/", $newDesc);
 		
 		// Check bigrams
 		$index = 0;
@@ -29,8 +31,10 @@
 					$style = "";
 				}
 
-
-				$descArray[$index] = "<a style='" . $style . "' href='term.php?termId=" . $term["id"] 
+				$newTermIds = $termIds;
+				array_push($newTermIds, $term["id"]);
+				$descArray[$index] = "<a style='" . $style . "' href='term.php?termIds=" 
+					. implode(",", $newTermIds) 
 					. "&gameId=" . $gameId . "&week=" . $week . "'>" . $descArray[$index];
 				$descArray[$index + 1] = $descArray[$index + 1] . "</a>";
 				$index += 2;
@@ -58,7 +62,10 @@
 			if (count($checkResult) != 0)
 			{
 				$term = $checkResult[0];
-				$descArray[$index] = "<a href='term.php?termId=" . $term["id"] 
+				
+				$newTermIds = $termIds;
+				array_push($newTermIds, $term["id"]);
+				$descArray[$index] = "<a href='term.php?termIds=" . implode(",", $newTermIds)
 					. "&gameId=" . $gameId . "&week=" . $week . "'>" . $descArray[$index]
 					. "</a>";
 			}
