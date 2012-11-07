@@ -16,7 +16,7 @@
 	$homeTeam = executeQuery($db, "select * from Team where id = " 
 		. $gameResult[0]["homeTeamId"] . ";");
 ?>
-
+//Uyhun's Random Comment
 <html>
 	<head>
 		<title>Football 4 Noobz</title>
