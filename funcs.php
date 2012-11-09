@@ -34,6 +34,11 @@
 				{
 					$style = "";
 				}
+				
+				if ($termIds == null)
+				{
+					$termIds = array();
+				}
 
 				$newTermIds = $termIds;
 				array_push($newTermIds, $term["id"]);
@@ -60,10 +65,14 @@
 			$check = preg_replace("/[^-A-Za-z0-9 ]/", '', $check);
 			$checkResult = getTerm($db, $check);
 			
-			if (count($checkResult) != 0 and $termIds != null)
+			if (count($checkResult) != 0)
 			{
 				$term = $checkResult[0];
 				
+				if ($termIds == null)
+				{
+					$termIds = array();
+				}
 				$newTermIds = $termIds;
 				array_push($newTermIds, $term["id"]);
 				$descArray[$index] = "<a href='term.php?termIds=" . implode(",", $newTermIds)

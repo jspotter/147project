@@ -49,27 +49,29 @@
 			
 				// Code for keypress() adapted from 
 				// http://bytes.com/topic/javascript/answers/92476-handling-enter-key-text-input-field
-				function keypress()
+				function keypress(week, gameId)
 				{
 					var key = window.event.keyCode || window.event.which;
 					if (key == 13)
 					{
-						submitform();
+						submitform(week, gameId);
 					}
 				}
 			
-				function submitform()
+				function submitform(week, gameId)
 				{
 					$.ajax({
-						url: "termcontent.php?term=" + $("#query").val()
+						url: "termcontent.php?week=" + week + "&gameId=" + gameId + "&term=" + $("#query").val()
 					}).done(function(data) {
 						$("#result").html(data);
 					});
 				}
 			</script>
 			
-			<input type="text" id="query" name="query" onkeypress="keypress();" />
-			<input type="submit" name="submit" value="Search" onclick="submitform();" />
+			<input type="text" id="query" name="query" 
+				onkeypress="keypress('<?= $week ?>', '<?= $gameId ?>');" />
+			<input type="submit" name="submit" value="Search" 
+				onclick="submitform('<?= $week ?>', '<?= $gameId ?>');" />
 			
 			<div id="result">
 			</div>

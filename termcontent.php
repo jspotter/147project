@@ -9,6 +9,15 @@
 	
 	$multipleIds = array();
 	
+	if ($week == null)
+	{
+		$week = $_GET["week"];
+	}
+	if ($gameId == null)
+	{
+		$gameId = $_GET["gameId"];
+	}
+	
 	if ($termId != null)
 	{
 		array_push($multipleIds, $termId);
