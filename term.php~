@@ -56,7 +56,7 @@
 			</div>
 			
 			<?php
-				include ("./termcontent.php");
+				include ("./termcontent.php?termid=" . $termId);
 				include ("./footer.php");
 			?>
 		</div>

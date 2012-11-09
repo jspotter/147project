@@ -1,9 +1,9 @@
 <?php
 	function getTerm($db, $term)
 	{
-		return executeQuery($db, "select distinct id from (select id from Term where name like \"" . $term
+		return executeQuery($db, "select id from Term where name like \"" . $term
 			. "\" union all select termId as id from Alias where alias like \""
-			. $term . "\");");
+			. $term . "\";");
 	}
 
 	function processDescription($db, $description, $termIds, $gameId, $week)
