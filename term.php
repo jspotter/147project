@@ -12,11 +12,18 @@
 	//TODO put week in the database?
 	
 	$termIds = explode(",", $termIdsString);
-	$backTermIds = array_slice($termIds, 0, count($termIds) - 1);
+	$backTermIds = array_slice($termIds, 0, count($termIds) - 1);	
 	if (count($backTermIds) == 0)
 	{
-		$backLink = "../147project/game.php?id=" . $gameId . "&week="
-			. $week;
+		if ($gameId == null)
+		{
+			$backLink = "../147project/#week" . $week;
+		}
+		else
+		{
+			$backLink = "../147project/game.php?id=" . $gameId . "&week="
+				. $week;
+		}
 	}
 	else
 	{
