@@ -16,7 +16,6 @@
 	$homeTeam = executeQuery($db, "select * from Team where id = " 
 		. $gameResult[0]["homeTeamId"] . ";");
 ?>
-//Uyhun's Random Comment
 <html>
 	<head>
 		<title>Football 4 Noobz</title>
@@ -36,12 +35,10 @@
 	</head>
 	<body>
 		<div data-role="page">
-			<div data-role="header">
-				<a href="../147project/#week<?= $week ?>">
-					Back
-				</a>
-				<h1>Football 4 Noobz</h1>
-			</div><!-- /header -->
+			<?php
+				$backLink = "../147project/#week" . $week;
+				include ("./header.php");
+			?>
 			<div data-role="header">
 				<center>
 					<?= $awayTeam[0]["name"] ?> @ <?= $homeTeam[0]["name"] ?>
@@ -65,6 +62,13 @@
 							<td><center><h3>Quarter <?= $curquarter ?></h3></center>
 							<td></td>
 							<td></td>
+						</tr>
+						<tr>
+							<th>Clock</th>
+							<th>Play</th>
+							<th><?= strtoupper(substr($awayTeam[0]["name"], 0, 3)) ?></th>
+							<th><?= strtoupper(substr($homeTeam[0]["name"], 0, 3)) ?></th>
+						</tr>
 					<?
 						foreach ($playResult as $play)
 						{
@@ -78,6 +82,12 @@
 									<td><br><center><h3>Quarter <?= $curquarter ?></h3></center>
 									<td></td>
 									<td></td>
+								</tr>
+								<tr>
+									<th>Clock</th>
+									<th>Play</th>
+									<th><?= strtoupper(substr($awayTeam[0]["name"], 0, 3)) ?></th>
+									<th><?= strtoupper(substr($homeTeam[0]["name"], 0, 3)) ?></th>
 								</tr>
 					<?php
 							}
@@ -93,6 +103,10 @@
 					?>
 				</table>
 			</div>
+			
+			<?php
+				include ("./footer.php");
+			?>
 		</div>
 	</body>
 </html>

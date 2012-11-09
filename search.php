@@ -4,27 +4,17 @@
 	include ("./dbfuncs.php");
 	include ("./funcs.php");
 	
-	$termIdsString = $_GET["termIds"];
 	$gameId = $_GET["gameId"];
 	$week = $_GET["week"];
 	
-	//TODO handle invalid input
-	//TODO put week in the database?
-	
-	$termIds = explode(",", $termIdsString);
-	$backTermIds = array_slice($termIds, 0, count($termIds) - 1);
-	if (count($backTermIds) == 0)
+	if ($gameId == null)
 	{
-		$backLink = "../147project/game.php?id=" . $gameId . "&week="
-			. $week;
+		$backLink = "../147project/#week" . $week;
 	}
 	else
 	{
-		$backLink = "../147project/term.php?termIds=" . implode(",", $backTermIds)
-			. "&gameId=" . $gameId . "&week=" . $week;
+		$backLink = "../147project/game.php?id=" . $gameId . "&week=" . $week;
 	}
-	$termId = $termIds[count($termIds) - 1];
-	
 ?>
 
 <html>
@@ -51,12 +41,42 @@
 			?>
 			<div data-role="header">
 				<h1>
-					<?= $term ?>
+					Search
 				</h1>
 			</div>
 			
+			<script type="text/javascript">
+			
+				// Code for keypress() adapted from 
+				// http://bytes.com/topic/javascript/answers/92476-handling-enter-key-text-input-field
+				function keypress(week, gameId)
+				{
+					var key = window.event.keyCode || window.event.which;
+					if (key == 13)
+					{
+						submitform(week, gameId);
+					}
+				}
+			
+				function submitform(week, gameId)
+				{
+					$.ajax({
+						url: "termcontent.php?week=" + week + "&gameId=" + gameId + "&term=" + $("#query").val()
+					}).done(function(data) {
+						$("#result").html(data);
+					});
+				}
+			</script>
+			
+			<input type="text" id="query" name="query" 
+				onkeypress="keypress('<?= $week ?>', '<?= $gameId ?>');" />
+			<input type="submit" name="submit" value="Search" 
+				onclick="submitform('<?= $week ?>', '<?= $gameId ?>');" />
+			
+			<div id="result">
+			</div>
+			
 			<?php
-				include ("./termcontent.php");
 				include ("./footer.php");
 			?>
 		</div>

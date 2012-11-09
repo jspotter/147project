@@ -1,4 +1,11 @@
 <?php
+	function getTerm($db, $term)
+	{
+		return executeQuery($db, "select distinct id from (select id from Term where name like \"" . $term
+			. "\" union all select termId as id from Alias where alias like \""
+			. $term . "\");");
+	}
+
 	function processDescription($db, $description, $termIds, $gameId, $week)
 	{
 		$descArray = explode(" ", $description);
@@ -10,11 +17,8 @@
 		while (true)
 		{
 			$check = $descArray[$index] . " " . $descArray[$index + 1];
-			$check = preg_replace("/[^A-Za-z0-9 ]/", '', $check);
-			$checkResult = executeQuery($db,
-				"select id from Term where name = \"" . $check 
-				. "\" union all select termId as id from Alias where alias = \""
-				. $check . "\";");
+			$check = preg_replace("/[^-A-Za-z0-9 ]/", '', $check);
+			$checkResult = getTerm($db, $check);
 			
 			if (count($checkResult) != 0)
 			{
@@ -29,6 +33,11 @@
 				else
 				{
 					$style = "";
+				}
+				
+				if ($termIds == null)
+				{
+					$termIds = array();
 				}
 
 				$newTermIds = $termIds;
@@ -53,16 +62,17 @@
 		while (true)
 		{
 			$check = $descArray[$index];
-			$check = preg_replace("/[^A-Za-z0-9 ]/", '', $check);
-			$checkResult = executeQuery($db,
-				"select id from Term where name = \"" . $check 
-				. "\" union all select termId as id from Alias where alias = \""
-				. $check . "\";");
+			$check = preg_replace("/[^-A-Za-z0-9 ]/", '', $check);
+			$checkResult = getTerm($db, $check);
 			
 			if (count($checkResult) != 0)
 			{
 				$term = $checkResult[0];
 				
+				if ($termIds == null)
+				{
+					$termIds = array();
+				}
 				$newTermIds = $termIds;
 				array_push($newTermIds, $term["id"]);
 				$descArray[$index] = "<a href='term.php?termIds=" . implode(",", $newTermIds)

@@ -32,10 +32,11 @@
 				$weekEnd = $WEEK_ENDS[$week - 1];
 		?>
 				<div data-role="page" id="week<?= $week ?>">
+					<?php
+						$backLink = "";
+						include ("./header.php");
+					?>
 
-					<div data-role="header">
-						<h1>Football 4 Noobz</h1>
-					</div><!-- /header -->
 					<div data-role="header" id="weeknav">
 						<?php
 							if ($week != 1)
@@ -125,23 +126,15 @@
 						?>
 						</ul>
 					</div><!-- /content -->
+					
+					<?php
+						include ("./footer.php");
+					?>
 				</div><!-- /page -->
 			
 		<?php
 			}
 		?>
-		
-		<div data-role="page" id="term">
-			<div data-role="header" data-theme="e">
-				<h1>TERM</h1>
-			</div><!-- /header -->
-			
-			<div data-role="content" data-theme="d">	
-				<h2>Explanation</h2>
-				<p>explanation explanation explanation</p>		
-				<!--p><a href="#game" data-rel="back" data-role="button" data-inline="true" data-icon="back">Back to page "one"</a></p-->	
-			</div><!-- /content -->
-		</div>
 	</body>
 </html>
 

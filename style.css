@@ -3,19 +3,29 @@ table
 	width: 100%;
 }
 
-td
+td, th
 {
 	margin: 0px;
 	padding: 2px;
 }
 
-table.playtable, table.playtable tr, table.playtable td
+table.playtable, table.playtable tr, table.playtable td, table.playtable th
 {
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #ddd;
 }
 
 a.player
 {
 	color: red;
+}
+
+.playtable
+{
+	font-size: 10pt;
+}
+
+.topsearch input
+{
+	color: white;
 }
 
