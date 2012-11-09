@@ -303,3 +303,6 @@
 303<>STNFRD<>general<>abbreviation for Stanford
 304<>faircatch<>general<>when the player returning a punt signals by waving his extended arm from side to side over his head, making it illegal for opposition to tackle him
 305<>CAL<>general<>abbreviation for California
+306<>Touchback<>event<>a play in which the ball is ruled dead on or behind a team's own goal line
+307<>OLB<>position<>
+308<>OG<>position<>
