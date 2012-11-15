@@ -7,13 +7,17 @@
 	$gameId = $_GET["gameId"];
 	$week = $_GET["week"];
 	
-	if ($gameId == null)
+	if ($gameId == null && $week == null)
 	{
-		$backLink = "../147project/#week" . $week;
+		$backLink = "./index.php";
+	}
+	else if ($gameId == null)
+	{
+		$backLink = "./week.php?week=" . $week;
 	}
 	else
 	{
-		$backLink = "../147project/game.php?id=" . $gameId . "&week=" . $week;
+		$backLink = "./game.php?id=" . $gameId . "&week=" . $week;
 	}
 ?>
 

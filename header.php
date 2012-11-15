@@ -11,7 +11,7 @@
 		else
 		{
 	?>
-			<a href="tutorial.php?week=<?= $week ?>">
+			<a href="tutorial.php">
 				Tutorial
 			</a>
 	<?php

@@ -36,7 +36,7 @@
 	<body>
 		<div data-role="page">
 			<?php
-				$backLink = "../147project/#week" . $week;
+				$backLink = "./week.php?week=" . $week;
 				include ("./header.php");
 			?>
 			<div data-role="header">

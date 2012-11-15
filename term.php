@@ -15,19 +15,23 @@
 	$backTermIds = array_slice($termIds, 0, count($termIds) - 1);	
 	if (count($backTermIds) == 0)
 	{
+		if ($gameId == null && $week == null)
+		{
+			$backLink = "./index.php";
+		}
 		if ($gameId == null)
 		{
-			$backLink = "../147project/#week" . $week;
+			$backLink = "./week.php?week=" . $week;
 		}
 		else
 		{
-			$backLink = "../147project/game.php?id=" . $gameId . "&week="
+			$backLink = "./game.php?id=" . $gameId . "&week="
 				. $week;
 		}
 	}
 	else
 	{
-		$backLink = "../147project/term.php?termIds=" . implode(",", $backTermIds)
+		$backLink = "./term.php?termIds=" . implode(",", $backTermIds)
 			. "&gameId=" . $gameId . "&week=" . $week;
 	}
 	$termId = $termIds[count($termIds) - 1];

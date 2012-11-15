@@ -1,6 +1,6 @@
 <?php
 	$week = $_GET["week"];
-	$backLink = "../147project/#week" . $week;
+	$backLink = "./index.php";
 ?>
 
 <html>
