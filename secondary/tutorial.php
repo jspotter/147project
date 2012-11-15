@@ -1,10 +1,11 @@
 <?php
 	$week = $_GET["week"];
-	$backLink = "../147project/#week" . $week;
+	$backLink = "./index.php";
 ?>
 
 <html>
 	<head>
+		<script src="http://cdn.optimizely.com/js/138697994.js"></script>
 		<title>Football 4 Noobz</title>
 		<meta charset="utf-8">
 		<meta name="apple-mobile-web-app-capable" content="yes">

@@ -17,17 +17,17 @@
 	{
 		if ($gameId == null)
 		{
-			$backLink = "../147project/#week" . $week;
+			$backLink = "./index.php#week" . $week;
 		}
 		else
 		{
-			$backLink = "../147project/game.php?id=" . $gameId . "&week="
+			$backLink = "./game.php?id=" . $gameId . "&week="
 				. $week;
 		}
 	}
 	else
 	{
-		$backLink = "../147project/term.php?termIds=" . implode(",", $backTermIds)
+		$backLink = "./term.php?termIds=" . implode(",", $backTermIds)
 			. "&gameId=" . $gameId . "&week=" . $week;
 	}
 	$termId = $termIds[count($termIds) - 1];
@@ -36,6 +36,7 @@
 
 <html>
 	<head>
+		<script src="http://cdn.optimizely.com/js/138697994.js"></script>
 		<title>Football 4 Noobz</title>
 		<meta charset="utf-8">
 		<meta name="apple-mobile-web-app-capable" content="yes">
