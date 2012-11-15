@@ -1,9 +1,0 @@
-.separator <>
-.import game.csv Game
-.import play.csv Play
-.import player.csv Player
-.import position.csv Position
-.import team.csv Team
-.import term.csv Term
-.import alias.csv Alias
-
