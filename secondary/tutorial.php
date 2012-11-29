@@ -1,54 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>ResponsiveSlides.js &middot; Responsive jQuery slideshow</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="../responsiveslides.css" />
-  <link rel="stylesheet" href="demo.css" />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script src="../responsiveslides.min.js"></script>
-  <script>
-    $(function () {
+<?php
+  $week = $_GET["week"];
+  $backLink = "./index.php#week" . $week;
+?>
 
-      // Slideshow 1
-      $("#slider1").responsiveSlides({
-        maxwidth: 800,
-        speed: 800
+<html>
+  <head>
+    <script src="http://cdn.optimizely.com/js/138697994.js"></script>
+    <title>Football 4 Noobz</title>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+    <link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- link rel="apple-touch-icon" href="appicon.png" /-->
+    <!-- link rel="apple-touch-startup-image" href="upstart.png"-->
+  
+    <script src="jquery-1.8.2.min.js"></script>
+    <script src="jquery.mobile-1.2.0.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="ResponsiveSlides.js/responsiveslides.min.js"></script>
+  </head>
+  <body>
+  
+    <div data-role="page" id="page1">
+      <?php
+        include ("./header.php");
+      ?>
+      <div data-role="header">
+        <h3>Tutorial</h3>
+      </div>
+      <ul class = "rslides">
+          <li><img src="howto1.jpg" alt= "" /></li>
+          <li><img src="howto2.jpg" alt= ""/></li>
+          <li><img src="howto3.jpg" alt= ""/></li>
+          <li><img src="howto4.jpg" alt= ""/></li>
+          <li><img src="howto5.jpg" alt= ""/></li>
+      </div>
+    </div>
+    <script>
+      $(function () {
+        $(".rslides").responsiveSlides();
       });
-
-      // Slideshow 2
-      $("#slider2").responsiveSlides({
-        auto: false,
-        pager: true,
-        speed: 300,
-        maxwidth: 540
-      });
-
-      // Slideshow 3
-      $("#slider3").responsiveSlides({
-        auto: false,
-        pager: false,
-        nav: true,
-        speed: 500,
-
-      });
-
-    });
-  </script>
-</head>
-<body>
-  <div id="wrapper">
-    <!-- Slideshow 2 -->
-    <ul class="rslides" id="slider2">
-      <li><a href="#"><img src="howto1.jpg" alt="" /></a></li>
-      <li><a href="#"><img src="howto2.jpg" alt="" /></a></li>
-      <li><a href="#"><img src="howto3.jpg" alt="" /></a></li>
-    </ul>
-    <a href = "#" class = "rslides_nav rslides3_nav prev">Previous</a>
-    <a href = "#" class = "rslides_nav rslides3_nav next">Next</a>
-   
+    </script>
     
-  </div>
-</body>
+  </body>
 </html>
