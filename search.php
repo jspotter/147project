@@ -9,7 +9,7 @@
 	
 	if ($gameId == null && $week == null)
 	{
-		$backLink = "./index.php";
+		$backLink = "./weeks.php";
 	}
 	else if ($gameId == null)
 	{
@@ -23,6 +23,7 @@
 
 <html>
 	<head>
+		<script src="http://cdn.optimizely.com/js/138697994.js"></script>
 		<title>Football 4 Noobz</title>
 		<meta charset="utf-8">
 		<meta name="apple-mobile-web-app-capable" content="yes">

@@ -47,7 +47,8 @@ create table Term
 	id integer PRIMARY KEY,
 	name varchar(100),
 	type varchar(100),
-	description text
+	description text,
+	filename text
 );
 
 create table Alias

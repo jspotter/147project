@@ -2,40 +2,6 @@
 	include ("./constants.php");
 	include ("./dbconnect.php");
 	include ("./dbfuncs.php");
-	include ("./funcs.php");
-	
-	$termIdsString = $_GET["termIds"];
-	$gameId = $_GET["gameId"];
-	$week = $_GET["week"];
-	
-	//TODO handle invalid input
-	//TODO put week in the database?
-	
-	$termIds = explode(",", $termIdsString);
-	$backTermIds = array_slice($termIds, 0, count($termIds) - 1);	
-	if (count($backTermIds) == 0)
-	{
-		if ($gameId == null && $week == null)
-		{
-			$backLink = "./weeks.php";
-		}
-		if ($gameId == null)
-		{
-			$backLink = "./week.php?week=" . $week;
-		}
-		else
-		{
-			$backLink = "./game.php?id=" . $gameId . "&week="
-				. $week;
-		}
-	}
-	else
-	{
-		$backLink = "./term.php?termIds=" . implode(",", $backTermIds)
-			. "&gameId=" . $gameId . "&week=" . $week;
-	}
-	$termId = $termIds[count($termIds) - 1];
-	
 ?>
 
 <html>
@@ -57,24 +23,41 @@
 		<script src="jquery.mobile-1.2.0.js"></script>
 	</head>
 	<body>
-		<div data-role="page">
+		<div data-role="page" id="main">
 			<?php
-				include ("./header.php");
+				$backLink = "";
+				include ('./header.php');
 			?>
-			<div data-role="header">
-				<h1>
-					<?= $term ?>
-				</h1>
-			</div>
-			
+			<div data-role="content">
+				<ul data-role="listview" data-inset="true" data-filter="true">
+					<?php
+						$numWeeks = 15;
+						for ($week = 1; $week <= $numWeeks; $week++)
+						{
+							$weekStart = $WEEK_STARTS[$week - 1];
+							$weekEnd = $WEEK_ENDS[$week - 1];
+							$games = executeQuery($db, 
+								"select * from Game where startTime >= '" . $weekStart
+								."' and startTime <= '" . $weekEnd . "' order by startTime;");
+					?>
+							<li>
+								<a href="./week.php?week=<?= $week ?>">
+									Week <?= $week ?> (<?= count($games) ?> games)
+								</a>								
+							</li>
+					<?php
+						}
+					?>
+				</ul>
+			</div><!-- /content -->
 			<?php
-				include ("./termcontent.php");
 				include ("./footer.php");
 			?>
-		</div>
+		</div><!-- /page -->
 	</body>
 </html>
 
 <?php
 	include ("./dbdisconnect.php");
 ?>
+

@@ -1,10 +1,15 @@
 <div data-role="header">
 	<?php
+		if (!$backLabel)
+		{
+			$backLabel = "Back";
+		}
+		
 		if ($backLink != "")
 		{
 	?>
 			<a href="<?= $backLink ?>">
-				Back
+				<?= $backLabel ?>
 			</a>
 	<?php
 		}

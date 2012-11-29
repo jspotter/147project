@@ -12,6 +12,7 @@
 
 <html>
 	<head>
+		<script src="http://cdn.optimizely.com/js/138697994.js"></script>
 		<title>Football 4 Noobz</title>
 		<meta charset="utf-8">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -37,7 +38,8 @@
 		?>
 			<div data-role="page" id="week<?= $week ?>">
 				<?php
-					$backLink = "./index.php";
+					$backLink = "./weeks.php";
+					$backLabel = "All Weeks";
 					include ("./header.php");
 				?>
 
@@ -117,7 +119,7 @@
 												<?php
 													if (!$final)
 													{
-														echo $clock;
+														echo substr($clock, 0, -3);
 													}
 												?>
 											</td>
