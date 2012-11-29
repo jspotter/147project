@@ -12,7 +12,7 @@
   $.fn.responsiveSlides = function (options) {
 
     // Default settings
-    var settings = $.extend({
+    var settings = $.extend({ 
       "auto": true,             // Boolean: Animate automatically, true or false
       "speed": 1000,            // Integer: Speed of the transition, in milliseconds
       "timeout": 4000,          // Integer: Time between slide transitions, in milliseconds
