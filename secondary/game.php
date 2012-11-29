@@ -94,7 +94,7 @@
 							}
 					?>
 							<tr>
-								<td><?= substr($play["clock"], 0, -3) ?></td>
+								<td><?= $play["clock"] ?></td>
 								<td><?= processDescription($db, $play["description"], array(), $gameId, $week) ?></td>
 								<td><?= $play["awayScore"] ?></td>
 								<td><?= $play["homeScore"] ?></td>
