@@ -38,8 +38,7 @@
 		?>
 			<div data-role="page" id="week<?= $week ?>">
 				<?php
-					$backLink = "./weeks.php";
-					$backLabel = "All Weeks";
+					$backLink = "./index.php";
 					include ("./header.php");
 				?>
 
@@ -119,7 +118,7 @@
 												<?php
 													if (!$final)
 													{
-														echo substr($clock, 0, -3);
+														echo $clock;
 													}
 												?>
 											</td>
