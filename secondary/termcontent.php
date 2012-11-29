@@ -116,6 +116,7 @@
 			?>
 						<b><?= $term["name"] ?>: </b>
 						<?= processDescription($db, $term["description"], $termIds, $gameId, $week) ?>
+						<br><img src="<?= $term["filename"] ?>"/>
 			<?php
 					}
 				}
