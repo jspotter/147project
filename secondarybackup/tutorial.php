@@ -22,6 +22,18 @@
     <script src="jquery.mobile-1.2.0.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script src="responsiveslides.min.js"></script>
+        <script>
+      $(function () {
+        $(".rslides").responsiveSlides({
+          auto: false,
+          pager: false,
+          nav: true,
+          speed: 300,
+          namespace: "callbacks",
+
+        });
+      });
+    </script>
   </head>
   <body>
   
@@ -33,19 +45,16 @@
       <div data-role="header">
         <h3>Tutorial</h3>
       </div>
-      <ul class = "rslides">
-          <li><img src="howto1.jpg" alt= "" /></li>
-          <li><img src="howto2.jpg" alt= ""/></li>
-          <li><img src="howto3.jpg" alt= ""/></li>
-          <li><img src="howto4.jpg" alt= ""/></li>
-          <li><img src="howto5.jpg" alt= ""/></li>
+      <div class = "callbacks_container">
+        <ul class = "rslides">
+            <li><img src="howto1.jpg" alt= ""/></li>
+            <li><img src="howto2.jpg" alt= ""/></li>
+            <li><img src="howto3.jpg" alt= ""/></li>
+            <li><img src="howto4.jpg" alt= ""/></li>
+            <li><img src="howto5.jpg" alt= ""/></li>
+        </ul>
       </div>
     </div>
-    <script>
-      $(function () {
-        $(".rslides").responsiveSlides();
-      });
-    </script>
   </body>
 </html>
 
