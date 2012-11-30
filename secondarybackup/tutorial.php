@@ -47,11 +47,21 @@
       </div>
       <div class = "callbacks_container">
         <ul class = "rslides">
-            <li><img src="howto1.jpg" alt= ""/></li>
-            <li><img src="howto2.jpg" alt= ""/></li>
-            <li><img src="howto3.jpg" alt= ""/></li>
-            <li><img src="howto4.jpg" alt= ""/></li>
-            <li><img src="howto5.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg1.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg4.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg5.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg6.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg7.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg8.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg9.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg10.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg11.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg12.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg13.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg14.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg15.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg16.jpg" alt= ""/></li>
+            <li><img src="tutorialimgs/altpg17.jpg" alt= ""/></li>
         </ul>
       </div>
     </div>
