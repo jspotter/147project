@@ -111,7 +111,7 @@
 						<?= processDescription($db, $position["description"], $termIds, $gameId, $week) ?>
 			<?php
 					}
-					else if ($term["type"] == "general")
+					else if ($term["type"] == "general" || $term["type"] == "event")
 					{
 			?>
 						<b><?= $term["name"] ?>: </b>
