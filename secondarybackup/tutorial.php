@@ -27,6 +27,7 @@
   
     <div data-role="page" id="page1">
       <?php
+				$backLink = "./weeks.php";
         include ("./header.php");
       ?>
       <div data-role="header">
