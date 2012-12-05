@@ -1,6 +1,6 @@
 .separator <>
 .import game.csv Game
-.import play.csv Play
+.import playss.csv Play
 .import player.csv Player
 .import position.csv Position
 .import team.csv Team
