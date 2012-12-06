@@ -20,7 +20,7 @@ create table Play
 
 create table Player
 (
-	name varchar(100) PRIMARY KEY,
+	name varchar(100),
 	teamId integer,
 	number integer,
 	position varchar(10),
