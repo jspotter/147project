@@ -8,6 +8,6 @@
 .import alias.csv Alias
 .import usc.csv Player
 .import arizona.csv Player
-.import arizonast.csv Player
+.import ari.csv Player
 .import colorado.csv Player
 .import oregon.csv Player
