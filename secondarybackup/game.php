@@ -28,6 +28,7 @@
 		<link rel="stylesheet" href="jquery.mobile-1.2.0.css" />
 
 		<link rel="stylesheet" href="style.css" />
+		<link rel="apple-touch-icon" href="appicon.jpg" />
 		<!-- link rel="apple-touch-icon" href="appicon.png" /-->
 		<!-- link rel="apple-touch-startup-image" href="upstart.png"-->
 	
