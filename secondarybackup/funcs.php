@@ -17,8 +17,13 @@
 		while (true)
 		{
 			$check = $descArray[$index] . " " . $descArray[$index + 1];
-			$check = preg_replace("/[^-A-Za-z0-9'\. ]/", '', $check);
+			$check1 = preg_replace("/[^-A-Za-z0-9'\. ]/", '', $check);
+			$check2 = preg_replace("/[^-A-Za-z0-9'\ ]/", '', $check);
 			$checkResult = getTerm($db, $check);
+			if (count($checkResult) == 0)
+			{
+				$checkResult = getTerm($db, $check2);
+			}
 			
 			if (count($checkResult) != 0)
 			{
