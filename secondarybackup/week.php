@@ -50,6 +50,7 @@
 						{	
 					?>
 							<a href="./week.php?week=<?= $previousWeek ?>" class="ui-btn-left">&lt;&lt;</a>
+
 					<?
 						}
 					?>
@@ -62,6 +63,8 @@
 					<?php
 						}
 					?>
+										
+					
 				</div>
 
 				<div data-role="content">
