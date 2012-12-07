@@ -40,7 +40,7 @@
 			<div data-role="page" id="week<?= $week ?>">
 				<?php
 					$backLink = "./weeks.php";
-					$backLabel = "All Weeks";
+					$backLabel = "Weeks";
 					include ("./header.php");
 				?>
 
